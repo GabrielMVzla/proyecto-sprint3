@@ -1,0 +1,58 @@
+<div class="container mt-5">
+  <div class="row align-items-center ">
+
+    <div class=" row">
+    <input
+      type="number"
+      class="col-1 text-center form-control d-flex"
+      [(ngModel)]="valor"
+    />
+
+    <div class="col-1 align-middle">
+      <div
+        class="btn-group-vertical  btn-block"
+        role="group"
+        aria-label="Second group"
+      >
+        <button type="submit" class="btn btn-success" (click)="sumarValor(1)">
+          &#5123;
+        </button>
+        <button type="submit" class="btn btn-danger" (click)="sumarValor(-1)">
+          &#5121;
+        </button>
+      </div>
+    </div>
+</div>
+
+    <div class="col-sm-10">
+      <button
+        (click)="enviarMensaje((mostrar = !mostrar))"
+        [ngSwitch]="valor"
+        class="btn col-12"
+        [ngClass]="fondo"
+      >
+        <div
+          class="align-items-center justify-content-center mt-2"
+          style="font-size: 28px"
+        >
+          <p *ngSwitchCase="1">
+            <strong>{{ titulo }}</strong>
+          </p>
+          <p *ngSwitchCase="2">
+            <strong>{{ titulo }}</strong>
+          </p>
+          <p *ngSwitchCase="3">
+            <strong>{{ titulo }}</strong>
+          </p>
+          <p *ngSwitchCase="4">
+            <strong>{{ titulo }}</strong>
+          </p>
+          <p *ngSwitchCase="5">
+            <strong>{{ titulo }}</strong>
+          </p>
+          <p *ngSwitchDefault><strong>DEFAULT DIRECTIVA</strong></p>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
