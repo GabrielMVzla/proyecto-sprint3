@@ -7,18 +7,22 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { DirectivasComponent } from './directivas/directivas.component';
 import { FormsModule } from '@angular/forms';
+import { LayoutComponent } from './layout/layout.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    DirectivasComponent
+    DirectivasComponent,
+    LayoutComponent
   ],
   imports: [
     FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
