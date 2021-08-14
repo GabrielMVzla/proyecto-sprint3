@@ -1,0 +1,18 @@
+.defSelect{
+    width: auto ;
+    height: 35px;
+    }
+
+.spanSelect1{
+    margin-left: 50px;
+}
+
+.spanColor{
+    background-color: gray;
+    color: white;
+}
+
+.headTable{
+    background-color: black;
+    color: white;
+}

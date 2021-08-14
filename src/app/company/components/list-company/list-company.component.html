@@ -1,0 +1,78 @@
+<div class="container p-4 ">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-4" >
+            <a><span class="badge badge-pill badge-light spanColor">ID</span></a>
+        </div>
+        <div class="col-3 ">
+            <a><span class="badge badge-pill badge-lighty spanColor">CEO</span></a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-1 mt-1">
+            <a><span class="badge badge-secondary spanColor">Filtrado</span></a>
+        </div>
+        <div class="col-4">
+            <select class="custom-select defSelect" (change)="fetchCompanyId($any($event.target).value)">
+                <option value="default">Primer filtrado</option>
+                <option [value]="item.id" *ngFor="let item of company">
+                    {{item.id}} {{item.name}}
+                </option>
+            </select>
+        </div>
+        <div class="col-3">
+            <select class=" custom-select defSelect">
+                <option *ngIf="companyOne != null " value={{companyOne.name}}>
+                    {{companyOne.CEO.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead class="headTable">
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Nombre Empresa</th>
+                        <th scope="col">Numero</th>
+                        <th scope="col">Encargado (CEO)</th>
+                        <th scope="col">Direccion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngIf="companyOne != null; else logg">
+                        <td> {{companyOne.id}} </td>
+                        <td> {{companyOne.name}} </td>
+                        <td> {{companyOne.phone}} </td>
+                        <td>
+                            {{companyOne.CEO.name}}
+                        </td>
+                        <td>
+                            {{companyOne.address.state}},
+                            {{companyOne.address.city}},
+                            {{companyOne.address.street}}
+                        </td>
+                    </tr>
+                    <ng-template #logg>
+                        <tr *ngFor="let item of company">
+                            <td> {{item.id}} </td>
+                            <td> {{item.name}} </td>
+                            <td> {{item.phone}} </td>
+                            <td>
+                                {{item.CEO.name}}
+                            </td>
+                            <td>
+                                {{item.address.state}},
+                                {{item.address.city}},
+                                {{item.address.street}}
+                            </td>
+                        </tr>
+                    </ng-template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+
