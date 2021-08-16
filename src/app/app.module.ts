@@ -9,6 +9,13 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { FormsModule } from '@angular/forms';
 import { LayoutComponent } from './layout/layout.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginacionComponent } from './paginacion/paginacion.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PaginatePipe } from './pipes/paginate.pipe';
+
+import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -16,13 +23,20 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     HeaderComponent,
     DirectivasComponent,
-    LayoutComponent
+    LayoutComponent,
+    PaginacionComponent,
+    PaginatePipe
   ],
   imports: [
     FormsModule,
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+
+    MatPaginatorModule,
+    MatTableModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
