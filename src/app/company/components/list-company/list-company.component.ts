@@ -10,6 +10,7 @@ import {Company} from '../../../core/models/company.model'
 export class ListCompanyComponent implements OnInit {
   company: Company[] = [];
   companyOne: Company;
+  butState: boolean = true;
 
   page = 1;
   pageSize = 4;
@@ -36,6 +37,7 @@ export class ListCompanyComponent implements OnInit {
         this.companyOne = cos
         console.log(this.companyOne);
       })      
+      this.butState = false
     }
 
   
