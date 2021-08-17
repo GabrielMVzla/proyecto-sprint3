@@ -15,6 +15,7 @@ import { PaginatePipe } from './pipes/paginate.pipe';
 
 import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { MatTableModule } from '@angular/material/table';
     DirectivasComponent,
     LayoutComponent,
     PaginacionComponent,
-    PaginatePipe
+    PaginatePipe,
+    EjemplosComponent
   ],
   imports: [
     FormsModule,

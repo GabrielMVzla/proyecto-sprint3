@@ -7,19 +7,21 @@ import { Component, SimpleChanges } from '@angular/core';
   ]
 })
 export class DirectivasComponent {
-  title = 'practica-directivas';
 
   valor: number = 1;
-
-  pruebaBool : boolean = true;
-  prueba: string = "hola";
-
   mostrar: boolean = true;
+
   mostrarTabla(mensaje: boolean)
   {
     this.mostrar = mensaje;
   }
   
+  enviarMensaje(mensaje: boolean){
+    if(!this.mostrar)
+      this.titulo = "MOSTRAR DATOS";
+    else
+      this.titulo = 'EJEMPLO DIRECTIVAS';
+  }
   sumarValor(valor: number): void 
   {
     this.valor += valor;
@@ -28,31 +30,20 @@ export class DirectivasComponent {
     if(this.valor > 5) this.valor = 1;
   }
 
-  enviarMensaje(mensaje: boolean){
-    if(!this.mostrar)
-      this.titulo = "MOSTRAR DATOS";
-    else
-      this.titulo = 'EJEMPLO DIRECTIVAS';
-  }
-
-  ngOnChanges(changes: SimpleChanges): void{
-    
-    let cambio: number = changes.valor.currentValue;
-    let txtColor = " text-white";
-  
-    switch(cambio)
+  estiloSwitch(cambio: number)
+  {
+    switch((cambio))
     {
-      case 1: this.fondo = "bg-primary" + txtColor; break;
-      case 2: this.fondo = "bg-dark" + txtColor; break;
-      case 3: this.fondo = "bg-danger" + txtColor; break;
-      case 4: this.fondo = "bg-success" + txtColor; break;
-      case 5: this.fondo = "bg-info" + txtColor; break;
-      default: this.fondo = "text-dark bg-white";
+      case 1: this.fondo = "btn-outline-primary  " ; break;
+      case 2: this.fondo = "btn-outline-dark " ; break;
+      case 3: this.fondo = "btn-outline-danger " ; break;
+      case 4: this.fondo = "btn-outline-success " ; break;
+      case 5: this.fondo = "btn-outline-info " ; break;
+      default: this.fondo = " btn-secondary ";
     }
   }
   
   titulo:string = 'EJEMPLO DIRECTIVAS';
-  fondo: string = "bg-primary";
-  btnColor: string = 'btn-success';
+  fondo: string = "btn-outline-primary ";
 
 }

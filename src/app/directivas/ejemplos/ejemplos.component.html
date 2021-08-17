@@ -1,0 +1,105 @@
+<p style="font-size: large;" class = "text-center mt-3">ngFor</p>
+
+<div class="row mt-4">
+  <div class="col-6">
+    <img
+      src="../../assets/directivas-estructurales.jpeg"
+      class="img-fluid rounded"
+      alt=""
+    />
+  </div>
+  <div class="col-6">
+    <table class="table table-dark table-striped align-items-center">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre Empresa</th>
+          <th scope="col">CEO</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let company of companies; let i = index">
+          <td *ngIf="i < repeticiones">{{ i + 1 }}</td>
+          <td *ngIf="i < repeticiones">{{ company.name }}</td>
+          <td *ngIf="i < repeticiones">{{ company.CEO.name }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr />
+<p style="font-size: large;" class = "text-center">ComboBox | NgModel</p>
+
+<form class="row align-items-center" (ngSubmit)="agregarElemento()">
+  <div class="col-6">
+    <div class="row">
+      <div class="offset-2 col-6">
+        <input
+          type="text"
+          name="model"
+          id="model"
+          class="form-control"
+          [(ngModel)]="company"
+        />
+      </div>
+      <div class="col">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+      </div>
+    </div>
+
+    <div class="row mt-2 col-6 offset-2" *ngIf="company.length > 0">
+      <label class="">Agregando: {{ company }}</label>
+    </div>
+    <div class="row">
+      <div class="col-6 offset-2">
+        <select
+          class="form-select form-select-md mt-2"
+          aria-label=".form-select-lg example"
+        >
+          <option selected disabled>Selecciona una Opción</option>
+          <option
+            value="index"
+            *ngFor="let comp of companiesSelect; let i = index"
+          >
+            {{ comp }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-6">
+    <img
+      src="../../assets/tipo-directivas.png"
+      class="img-fluid rounded"
+      alt=""
+    />
+  </div>
+</form>
+<hr />
+<p style="font-size: large;" class = "text-center">NgClass | NgStyle</p>
+<div class="row">
+  <div class="col">
+
+
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" (change)="cambiaCheck()">
+    <label class="btn btn-outline-primary" for="btncheck1"  >Check</label>
+  
+  </div>
+  <div class="col-1">
+    <input
+      type="number"
+      name="ngStyleVariable"
+      id="ngStyleVariable"
+      class="form-control"
+      [(ngModel)]="anchuraAltura"
+    />
+  </div>
+  <div class="col-10">
+    <div
+      class="cuadrado border border-primary rounded"
+      [ngClass]="{principal: colorCheck, secundario: !colorCheck}"
+      [ngStyle]="{ 'width':anchuraAltura+'px', 'height':anchuraAltura+'px'} "
+    ></div>
+  </div>
+</div>

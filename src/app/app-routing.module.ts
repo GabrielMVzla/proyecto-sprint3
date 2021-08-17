@@ -11,6 +11,10 @@ const routes: Routes = [
   component: DirectivasComponent
   },
   {
+    path: 'directivas', 
+  component: DirectivasComponent
+  },
+  {
     path:'',
     component: LayoutComponent,
     children:[

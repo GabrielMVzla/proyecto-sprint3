@@ -1,34 +1,38 @@
-<div class="container mt-5">
-  <div class="row align-items-center ">
+<p style="font-size: large;" class = "text-center mt-3">ngSwitch | ngIf</p>
 
-    <div class=" row">
+<div class="container mt-3 " style="margin-bottom: 250px;">
+  <div class="row  ">
+
     <input
       type="number"
-      class="col-1 text-center form-control d-flex"
+      (keyup)="estiloSwitch(valor)"
+      (change)="estiloSwitch(valor)"
+      class="col text-center form-control "
       [(ngModel)]="valor"
     />
 
-    <div class="col-1 align-middle">
+    <div class="col-1 ml-1">
       <div
-        class="btn-group-vertical  btn-block"
+        class="btn-group-vertical col-12 "
         role="group"
         aria-label="Second group"
       >
-        <button type="submit" class="btn btn-success" (click)="sumarValor(1)">
+        <button type="submit" class="btn btn-primary" (click)="sumarValor(1); estiloSwitch(valor)">
           &#5123;
         </button>
-        <button type="submit" class="btn btn-danger" (click)="sumarValor(-1)">
+        <button type="submit" class="btn btn-outline-danger" (click)="sumarValor(-1); estiloSwitch(valor)">
           &#5121;
         </button>
       </div>
     </div>
-</div>
 
-    <div class="col-sm-10">
+    <div class="col-10">
       <button
-        (click)="enviarMensaje((mostrar = !mostrar))"
+      type="button"
+        (click)="mostrar = !mostrar"
         [ngSwitch]="valor"
-        class="btn col-12"
+        class="btn col-12 "
+        aria-label="Basic outlined example"
         [ngClass]="fondo"
       >
         <div
@@ -55,4 +59,13 @@
       </button>
     </div>
   </div>
-</div>
+
+  <app-ejemplos *ngIf="mostrar; else elseBlock"></app-ejemplos>
+
+  <ng-template #elseBlock >
+    <div style="margin-top: 250px;"></div>
+    <p class = "text-center">No se está mostrando nada!</p>
+    <div style="margin-bottom: 500px;"></div>
+  </ng-template>
+
+</div >
