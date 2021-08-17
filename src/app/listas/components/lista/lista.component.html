@@ -1,0 +1,26 @@
+<h2>Listas</h2>
+<div class="table">
+<ol>
+    <li>ID</li>
+    <li>Nombre</li>
+    <li>Teléfono</li>
+    <li>Estado</li>
+    <li>Ciudad</li>
+    <li>Calle</li>
+    <li>Código Postal</li>
+    <li>Nombre CEO</li>
+    <li>Teléfono CEO</li>
+  </ol>
+  
+  <ul *ngFor='let data of company'>
+    <li>{{data.id}}</li>
+    <li>{{data.name}}</li>
+    <li>{{data.phone}}</li>
+    <li>{{data.address.state}}</li>
+    <li>{{data.address.city}}</li>
+    <li>{{data.address.street}}</li>
+    <li>{{data.address.zipcode}}</li>
+    <li>{{data.CEO.name}}</li>
+    <li>{{data.CEO.phone}}</li>
+  </ul>
+</div>

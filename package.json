@@ -23,6 +23,7 @@
     "@angular/router": "~12.1.0",
     "bootstrap": "^5.1.0",
     "jquery": "^3.6.0",
+    "node-modules": "^1.0.1",
     "popper.js": "^1.16.1",
     "rxjs": "~6.6.0",
     "sweetalert2": "^11.1.2",
