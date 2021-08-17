@@ -16,7 +16,7 @@ export class EjemplosComponent implements OnInit {
   company: string = "";
   
   colorCheck: boolean = false;
-  anchuraAltura: number = 100;
+  anchuraAltura: number = 300;
 
   constructor(private companyService: CompanyDataService) {
     companyService.getAllCompany().subscribe(response => {

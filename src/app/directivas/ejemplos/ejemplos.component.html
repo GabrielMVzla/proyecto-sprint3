@@ -97,9 +97,9 @@
   </div>
   <div class="col-10">
     <div
-      class="cuadrado border border-primary rounded"
-      [ngClass]="{principal: colorCheck, secundario: !colorCheck}"
-      [ngStyle]="{ 'width':anchuraAltura+'px', 'height':anchuraAltura+'px'} "
+      class="cuadrado border  rounded"
+      [ngClass]="{ 'border-danger principal': colorCheck, 'border-primary secundario': !colorCheck}"
+      [ngStyle]="{ 'width':anchuraAltura+'px', 'height': '40px'} "
     ></div>
   </div>
 </div>
