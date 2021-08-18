@@ -16,7 +16,7 @@ import { PaginatePipe } from './pipes/paginate.pipe';
 import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
-
+import { CoreModule } from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -35,9 +35,9 @@ import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    CoreModule
 
   ],
   providers: [],

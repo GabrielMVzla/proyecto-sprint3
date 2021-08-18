@@ -7,10 +7,6 @@ import { PaginacionComponent } from "./paginacion/paginacion.component"
 
 const routes: Routes = [
   {
-    path: '', 
-  component: DirectivasComponent
-  },
-  {
     path: 'directivas', 
   component: DirectivasComponent
   },
