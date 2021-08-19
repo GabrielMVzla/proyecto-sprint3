@@ -31,7 +31,12 @@ openModal(id: number){
   const activeModal = this.modal.open(EditFormCompanyComponent);
     activeModal.componentInstance.companyId = id;
     activeModal.afterClosed().subscribe(result =>{
-      this.fetchCompanyId(id);    
+      if (this.companyOne != null) {
+        this.fetchCompanyId(id)
+      }  
+      else{
+        this.fetchCompany()
+      }
   })
 }
 
@@ -55,7 +60,12 @@ openModal2(){
   deleteCompany(id:number){
       this.companyDataService.deleteCompany(id).subscribe(response =>{
         console.log(response);
-        this.fetchCompany();   
+        if (this.companyOne != null) {
+          this.fetchCompanyId(id)
+        }  
+        else{
+          this.fetchCompany()
+        }
       })
   }
 
