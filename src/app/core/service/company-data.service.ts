@@ -20,7 +20,19 @@ export class CompanyDataService {
   }
 
   getOneCompany(id:number){
-    return this.http.get<Company>(`${environment.url_api}/company/${id}`)
+    return this.http.get<Company>(`${environment.url_api}/company/${id}`);
+  }
 
-}
+  postCompany(company:Company){
+    return this.http.post(`${environment.url_api}/company`, company);
+  }
+
+  deleteCompany(id:number){
+    return this.http.delete(`${environment.url_api}/company/${id}`);
+  }
+
+  putCompany(id: number, change: Partial <Company>){
+    return this.http.put(`${environment.url_api}/company/${id}`, change)
+  }
+
 }

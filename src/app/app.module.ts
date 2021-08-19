@@ -17,6 +17,8 @@ import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginato
 import { MatTableModule } from '@angular/material/table';
 import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
 import { CoreModule } from './core/core.module';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { CoreModule } from './core/core.module';
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatTableModule,
-    CoreModule
+    CoreModule,
+    MatIconModule
 
   ],
   providers: [],

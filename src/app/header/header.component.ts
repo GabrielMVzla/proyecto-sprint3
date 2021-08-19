@@ -9,7 +9,7 @@ import swal from 'sweetalert2';
   }
 )
 export class HeaderComponent {
-  title:string = 'App Angular'
+  title:string = 'ZZTeam'
 
   constructor( private router: Router ){
 

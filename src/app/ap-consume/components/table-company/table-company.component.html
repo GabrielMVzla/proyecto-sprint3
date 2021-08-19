@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row p-4">
+        <div class="col-2">
+            <h1><span class="badge bg-secondary">Agregar Compañia</span></h1>
+        </div>
+        <div class="col-2">
+            <button mat-mini-fab color="primary" (click)="openModal2()" >
+                <mat-icon>plus_one</mat-icon>
+              </button>
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="col-1 ">
+            <a><span class="badge badge-secondary spanColor">Busqueda</span></a>
+        </div>
+        <div class="col-4">
+            <select class="custom-select defSelect" (change)="fetchCompanyId($any($event.target).value)">
+                <option value="default">Seleccione</option>
+                <option [value]="item.id" *ngFor="let item of company">
+                    {{item.id}} {{item.name}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="row p-4">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead class="headTable">
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Nombre Empresa</th>
+                        <th scope="col">Numero</th>
+                        <th scope="col">Encargado (CEO)</th>
+                        <th scope="col">Direccion</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                            <tbody>
+                                <tr *ngIf="companyOne != null; else logg">
+                                    <td> {{companyOne.id}} </td>
+                                    <td> {{companyOne.name}} </td>
+                                    <td> {{companyOne.phone}} </td>
+                                    <td>
+                                        {{companyOne.CEO.name}}
+                                    </td>
+                                    <td>
+                                        {{companyOne.address.state}},
+                                        {{companyOne.address.city}},
+                                        {{companyOne.address.street}}
+                                    </td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-6 mt-2">
+                                                <button mat-raised-button color="primary" (click)="openModal(companyOne.id)" >Editar</button>
+                                            </div>
+                                            <div class="col-3">
+                                                <button mat-fab color="primary" (click)="deleteCompany(companyOne.id)">
+                                                    <mat-icon>delete</mat-icon>
+                                                  </button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <ng-template #logg>
+                                    <tr *ngFor="let item of company">
+                                        <td> {{item.id}} </td>
+                                        <td> {{item.name}} </td>
+                                        <td> {{item.phone}} </td>
+                                        <td>
+                                            {{item.CEO.name}}
+                                        </td>
+                                        <td>
+                                            {{item.address.state}},
+                                            {{item.address.city}},
+                                            {{item.address.street}}
+                                        </td>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-6 mt-2">
+                                                    <button mat-raised-button color="primary" (click)="openModal(item.id)" >Editar</button>
+                                                </div>
+                                                <div class="col-3">
+                                                    <button mat-fab color="primary" (click)="deleteCompany(item.id)">
+                                                        <mat-icon>delete</mat-icon>
+                                                      </button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </ng-template>
+                            </tbody>
+            </table>            
+        </div>
+    </div>
+</div>
