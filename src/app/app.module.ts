@@ -14,6 +14,8 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PaginacionComponent } from './paginacion/paginacion.component';
 import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
+import { CoreModule } from './core/core.module';
+import {MatIconModule} from '@angular/material/icon';
 
 
 import { PaginatePipe } from './pipes/paginate.pipe';
@@ -35,9 +37,10 @@ import { PaginatePipe } from './pipes/paginate.pipe';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    CoreModule,
+    MatIconModule
 
   ],
   providers: [],

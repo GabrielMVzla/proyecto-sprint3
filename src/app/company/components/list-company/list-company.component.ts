@@ -25,16 +25,16 @@ export class ListCompanyComponent implements OnInit {
    }
 
     fetchCompany(){
-      this.companyDataService.getAllCompany().subscribe(cos =>{
-      this.company = cos;
-      console.log(cos);
+      this.companyDataService.getAllCompany().subscribe(response =>{
+      this.company = response;
+      console.log(response);
       
       });
       
     }
     fetchCompanyId(id: number){
-     this.companyDataService.getOneCompany(id).subscribe(cos => {
-        this.companyOne = cos
+     this.companyDataService.getOneCompany(id).subscribe(response => {
+        this.companyOne = response;
         console.log(this.companyOne);
       })      
       this.butState = false
