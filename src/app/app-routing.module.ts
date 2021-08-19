@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DirectivasComponent } from './directivas/directivas.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PaginacionComponent } from "./paginacion/paginacion.component"
+import { HomeComponent } from "./home/home.component";
 
 
 const routes: Routes = [
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: "paginate",
     component: PaginacionComponent
+  },
+  {
+    path: "home",
+    component: HomeComponent
   }
 
 ];

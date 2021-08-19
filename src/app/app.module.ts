@@ -16,6 +16,8 @@ import { PaginatePipe } from './pipes/paginate.pipe';
 import { MatPaginatorIntl, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
+import { HomeComponent } from './home/home.component';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -27,7 +29,8 @@ import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
     LayoutComponent,
     PaginacionComponent,
     PaginatePipe,
-    EjemplosComponent
+    EjemplosComponent,
+    HomeComponent
   ],
   imports: [
     FormsModule,
@@ -37,7 +40,8 @@ import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
     BrowserAnimationsModule,
 
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatIconModule
 
   ],
   providers: [],

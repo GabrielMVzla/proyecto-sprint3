@@ -1,0 +1,24 @@
+h1{
+    font-size: 50px;
+}
+
+
+.cabecero {
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    color: #fff;
+    /* background: url(assets/bg-pattern.png), #7b4397; */
+    /*background: url(assets/bg-pattern.png), -webkit-gradient(linear, right top, left top, from(#7b4397), to(#dc2430)); */
+    /* background: url(assets/bg-pattern.png), linear-gradient(to left, #7b4397, #dc2430) */
+}
+
+
+mat-icon{
+    font-size: 35px;
+    padding-right: 50px;
+}
