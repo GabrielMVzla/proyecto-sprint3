@@ -1,4 +1,4 @@
-<p style="font-size: large;" class = "text-center mt-3">ngFor</p>
+<p style="font-size: large" class="text-center mt-3">ngFor</p>
 
 <div class="row mt-4">
   <div class="col-6">
@@ -28,10 +28,10 @@
   </div>
 </div>
 <hr />
-<p style="font-size: large;" class = "text-center">ComboBox | NgModel</p>
+<p style="font-size: large" class="text-center">ComboBox | NgModel</p>
 
 <form class="row align-items-center" (ngSubmit)="agregarElemento()">
-  <div class="col-6">
+  <div class="col-4">
     <div class="row">
       <div class="offset-2 col-6">
         <input
@@ -68,7 +68,24 @@
     </div>
   </div>
 
-  <div class="col-6">
+  <div class="col-4">
+    <div class="row align-items-center">
+      <div class="offset-2 col-8">
+        <form class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            name="entradaNgModel"
+            id="entradaNgModel"
+            [(ngModel)]="entradaNgModel"
+          />
+          <label for="entradaNgModel">{{ entradaNgModel }}</label>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-4">
     <img
       src="../../assets/tipo-directivas.png"
       class="img-fluid rounded"
@@ -77,14 +94,17 @@
   </div>
 </form>
 <hr />
-<p style="font-size: large;" class = "text-center">NgClass | NgStyle</p>
+<p style="font-size: large" class="text-center">NgClass | NgStyle</p>
 <div class="row">
   <div class="col">
-
-
-    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" (change)="cambiaCheck()">
-    <label class="btn btn-outline-primary" for="btncheck1"  >Check</label>
-  
+    <input
+      type="checkbox"
+      class="btn-check"
+      id="btncheck1"
+      autocomplete="off"
+      (change)="cambiaCheck()"
+    />
+    <label class="btn btn-outline-primary" for="btncheck1">Check</label>
   </div>
   <div class="col-1">
     <input
@@ -97,9 +117,12 @@
   </div>
   <div class="col-10">
     <div
-      class="cuadrado border  rounded"
-      [ngClass]="{ 'border-danger principal': colorCheck, 'border-primary secundario': !colorCheck}"
-      [ngStyle]="{ 'width':anchuraAltura+'px', 'height': '40px'} "
+      class="cuadrado border rounded"
+      [ngClass]="{
+        'border-danger principal': colorCheck,
+        'border-primary secundario': !colorCheck
+      }"
+      [ngStyle]="{ width: anchuraAltura + 'px', height: '40px' }"
     ></div>
   </div>
 </div>
