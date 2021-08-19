@@ -50,7 +50,7 @@ openModal2(){
 
 
 
-/// Service
+/// Services
   fetchCompany(){
     this.companyDataService.getAllCompany().subscribe( response =>{
       this.company = response
