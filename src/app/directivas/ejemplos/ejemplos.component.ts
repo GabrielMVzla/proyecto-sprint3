@@ -9,6 +9,8 @@ import { CompanyDataService } from 'src/app/core/service/company-data.service';
 })
 export class EjemplosComponent implements OnInit {
 
+  entradaNgModel: string = "valor desde ts";
+
   companies: Company[] = [];
   companiesSelect: string[] = [];
 

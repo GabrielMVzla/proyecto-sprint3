@@ -8,6 +8,9 @@ import { Component, SimpleChanges } from '@angular/core';
 })
 export class DirectivasComponent {
 
+  nombre: string = "juan";
+  cambiar(){this.nombre = "ana"}
+
   valor: number = 1;
   mostrar: boolean = true;
 
