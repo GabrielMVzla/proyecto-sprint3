@@ -2,12 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DirectivasComponent } from './directivas/directivas.component';
 import { LayoutComponent } from './layout/layout.component';
-<<<<<<< HEAD
 import { PaginacionComponent } from "./paginacion/paginacion.component"
 import { HomeComponent } from "./home/home.component";
-=======
-import { PaginacionComponent } from "./paginacion/paginacion.component";
->>>>>>> 14097574a9f185bee9f2387ecb4baf4bb982520b
 
 
 const routes: Routes = [
