@@ -14,14 +14,10 @@ import { DirectivasComponent } from './directivas/directivas.component';
 import { LayoutComponent } from './layout/layout.component';
 import { PaginacionComponent } from './paginacion/paginacion.component';
 import { EjemplosComponent } from './directivas/ejemplos/ejemplos.component';
-<<<<<<< HEAD
 import { HomeComponent } from './home/home.component';
 import {MatIconModule} from '@angular/material/icon';
-=======
 import { CoreModule } from './core/core.module';
-import {MatIconModule} from '@angular/material/icon';
 
->>>>>>> 14097574a9f185bee9f2387ecb4baf4bb982520b
 
 import { PaginatePipe } from './pipes/paginate.pipe';
 
@@ -45,10 +41,7 @@ import { PaginatePipe } from './pipes/paginate.pipe';
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatTableModule,
-<<<<<<< HEAD
-=======
     CoreModule,
->>>>>>> 14097574a9f185bee9f2387ecb4baf4bb982520b
     MatIconModule
 
   ],
